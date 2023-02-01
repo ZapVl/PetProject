@@ -163,6 +163,7 @@ body.on .bulb span:nth-child(2) {
     right: 200px;
     width: 80px;
     height: 80px;
+    
     border: solid 3px black;
     display: flex;
     justify-content: center;
@@ -214,3 +215,9 @@ body.on .bulb span:nth-child(2) {
     display: none;
 }
 
+@media(max-width: 1400px){
+    body .switch{
+        position: absolute;
+        left: 0;
+    }
+}
