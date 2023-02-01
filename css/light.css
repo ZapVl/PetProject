@@ -1,0 +1,216 @@
+:root {
+    --main-bg-color: rgb(43, 40, 40);
+  }
+
+.none{
+    display: none;
+    
+}
+main {
+    animation: 1s show ease;
+    -webkit-animation: 2s show ease;
+}
+  
+  @keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+
+
+body.on .bulb {
+    background: #fff;
+    box-shadow: 0 0 50px #fff,
+        0 0 100px #fff,
+        0 0 150px #fff,
+        0 0 200px #fff,
+        0 0 250px #fff,
+        0 0 350px #fff;
+}
+/* linear-gradient(#2b1055,#7597be) */
+body{
+    transition: all .3.5s ease;
+    background:  var(--main-bg-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-transition: all .3.5s ease;
+    -moz-transition: all .3.5s ease;
+    -ms-transition: all .3.5s ease;
+    -o-transition: all .3.5s ease;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+
+body.on .bulb::before {
+    background: #fff;
+}
+
+body.on .bulb::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
+}
+
+.light-row {
+   position: absolute;
+   top: 200px;
+}
+
+.light {}
+
+
+.bulb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(48, 46, 46);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+}
+
+.bulb::before {
+
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 80px;
+    background-color: rgb(48, 46, 46);
+    left: 22.5px;
+    top: -50px;
+    border-top: 30px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+
+.bulb span:nth-child(1) {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 24px;
+    left: 19px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-bottom-right-radius: 40px;
+    box-shadow: 20px 20px 0 10px rgb(48, 46, 46);
+
+}
+
+body.on .bulb span:nth-child(1) {
+    box-shadow: 20px 20px 0 10px #fff;
+}
+
+body.on .bulb span:nth-child(2) {
+    box-shadow: -20px 20px 0 10px rgb(255, 255, 255);
+}
+
+.bulb span:nth-child(2) {
+    transform: rotate(78deg);
+    position: absolute;
+    top: 22px;
+    right: 19px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-bottom-left-radius: 40px;
+    box-shadow: -20px 20px 0 10px rgb(48, 46, 46);
+
+
+}
+
+.wire {
+    position: absolute;
+    width: 4px;
+    height: 100vh;
+    background: #000;
+    left: calc(50% - 2px);
+    bottom: 82%;
+
+}
+
+.switch {
+    z-index: 1000000;
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    width: 80px;
+    height: 80px;
+    border: solid 3px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(#eee, #ccc, #eee);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.switch .btn {
+    position: relative;
+    width: 25%;
+    height: 40px;
+    background: linear-gradient(#777, #fff, #777);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.switch .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(#fff, #fff);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.switch .btn::before {}
+
+.on .switch .btn::before {
+    top: 15%;
+}
+
+#audio {
+    display: none;
+}
+
